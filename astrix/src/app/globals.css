@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Inter:wght@300;400;500&display=swap');
+
+body {
+  background: white;
+  font-family: 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav-item {
+  @apply text-[14px] text-[#1a1a1a] font-normal hover:opacity-60 transition-opacity;
+}
+
+.logo {
+  @apply text-[#409CFF] text-[15px] font-medium tracking-tight font-['Space_Grotesk'];
+}
+
+.title {
+  @apply text-[42px] text-[#1a1a1a] font-light tracking-[-0.03em] font-['Space_Grotesk'] leading-[1.1];
+}
+
+.subtitle {
+  @apply text-[#737373] text-[15px] font-normal max-w-[280px];
+}
+
+.btn {
+  @apply bg-[#409CFF] text-white text-[14px] font-normal px-5 py-1.5 rounded-full 
+         hover:opacity-90 transition-opacity;
+}
+
+.header {
+  @apply fixed w-full top-0 backdrop-blur-sm bg-white/80;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl;
+  }
+  
+  .heading-gradient {
+    @apply bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent;
+  }
+  
+  .nav-link {
+    @apply text-[#1A1A1A] text-[15px] font-medium hover:text-black/70 transition-colors;
+  }
+  
+  .logo-wrapper {
+    @apply flex items-center gap-3;
+  }
+  
+  .logo-text {
+    @apply text-[#409CFF] text-xl tracking-tight font-semibold;
+  }
+
+  .main-heading {
+    @apply text-[32px] leading-tight font-medium text-[#1A1A1A] tracking-[-0.02em];
+  }
+
+  .main-subtext {
+    @apply text-[#666666] text-lg font-normal;
+  }
+
+  .launch-button {
+    @apply bg-[#409CFF] text-white text-[15px] font-medium px-6 py-2 rounded-full
+           hover:bg-[#409CFF]/90 transition-all duration-200;
+  }
+}
